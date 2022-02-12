@@ -29,9 +29,10 @@ contract JooleeNFT is ERC721URIStorage{
         _safeMint(msg.sender, newItemId);
 
         // set NFT's data
-        _setTokenURI(newItemId, "blah");
+        _setTokenURI(newItemId, "https://jsonkeeper.com/b/NKLT");
+        console.log("An NFT w/ ID %s has been minted to %s", newItemId, msg.sender);
 
         // increment counter for when next NFT is minted
         _tokenIds.increment();
-    }2
+    }
 }

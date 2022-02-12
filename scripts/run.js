@@ -14,6 +14,11 @@ const main = async () => {
       // wait til contract is mined and deployed to blockchain
       await nftContract.deployed()
       console.log("Contract deployed to:", nftContract.address)
+
+      // call func
+      let txn = await nftContract.makeJOONFT()
+      // wait for it to be mined
+      await txn.wait()
 }
 
 const runMain = async () => {
